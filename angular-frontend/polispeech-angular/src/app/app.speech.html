@@ -1,0 +1,15 @@
+<div class="microsoft container">
+    <p class="marquee">
+
+
+
+<span  *ngFor="let word of words" >
+  <span *ngIf="polarity[word] < 0" style = "color: red" >{{word}}</span>
+  <span *ngIf="polarity[word] > 0" style = "color: green" >{{word}}</span>
+  <span *ngIf="!(polarity[word] > 0) &&  !(polarity[word] < 0)" style = "color: #263238" >{{word}}</span>
+</span> 
+</p>
+</div>
+
+<div class = "cont2" #chart></div>
+<div class = "cont3" #chart2></div>
